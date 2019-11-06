@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
+      <nuxt-link class="navbar-item" to="/">
         <img src="/logo.png" width="112" height="28">
-      </a>
+      </nuxt-link>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -14,9 +14,9 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <nuxt-link class="navbar-item" to="/">
           Home
-        </a>
+        </nuxt-link>
 
         <a class="navbar-item">
           Blog

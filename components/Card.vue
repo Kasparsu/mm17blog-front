@@ -24,7 +24,7 @@
 
       <div class="content">
         <p v-html="post.snippet + '...'"></p>
-        <a class="button is-primary">Read more</a>
+        <nuxt-link :to="'/posts/' + post.id" class="button is-primary" v-if="!$route.params.hasOwnProperty('id')">Read more</nuxt-link>
         <br>
         <time datetime="2016-1-1">{{post.human_date}}</time>
       </div>
