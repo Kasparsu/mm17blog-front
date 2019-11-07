@@ -1,6 +1,6 @@
 <template>
     <div>
-      <card :post="post" v-if="post"></card>
+      <card :post="$store.state.post" v-if="$store.state.post"></card>
     </div>
 </template>
 
@@ -10,14 +10,11 @@
         name: "_id",
         components: {Card},
         created(){
-          this.$axios.$get('http://localhost:8080/api/posts/' + this.$route.params.id).then(resp=>{
-            this.post = resp;
-          });
-
+            this.$store.dispatch('setPost', this.$route.params.id);
         },
         data() {
             return {
-                post:null
+
             }
         }
     }

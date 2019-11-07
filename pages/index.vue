@@ -27,10 +27,10 @@ export default {
   },
     methods:{
         loadNextPosts(){
-            this.$store.dispatch('loadPosts', this.pagination.next_page_url);
+            this.$store.dispatch('loadPosts', this.$store.state.pagination.next_page_url);
         },
         loadPrevPosts(){
-            this.$store.dispatch('loadPosts', this.pagination.prev_page_url);
+            this.$store.dispatch('loadPosts', this.$store.state.pagination.prev_page_url);
         }
     }
 }
